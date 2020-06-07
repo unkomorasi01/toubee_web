@@ -4,30 +4,17 @@ var router = express.Router();
 var app = express();
 
 /* GET users listing. */
-router.post('/', function(req, res, next) {
-    console.log("post");
-    console.log(req.session);
-    console.log("********************");
-    console.log(req);
-        if (req.session.user) {
-            res.render('complete', {
-                "user": req.session.user
-              });
-        } else {
-        res.redirect('/login');
-        }
-});
 router.get('/', function(req, res, next) {
     console.log("get");
-    console.log(req.session);
+    console.log(req.session.email);
     console.log("********************");
     console.log(req);
-        if (req.session.user) {
+        if (req.session.email) {
             res.render('complete', {
-                "user": req.session.user
+                "user": req.session.email
               });
         } else {
-        res.redirect('/login');
+        res.redirect('/login.html');
         }
 });
 

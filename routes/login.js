@@ -25,22 +25,10 @@ router.post('/', function(req, res, next) {
                 console.log(result.rows[0].count);
                 if (result.rows[0].count == 1) {
                     console.log("ok login");
-                    // send success page
-                    // TODO make session
-                    app.use(session({
-                        secret: email,
-                        resave: false,
-                        saveUninitialized: false,
-                        cookie:{
-                            httpOnly: true,
-                            secure: false,
-                            maxage: 1000 * 60 * 30
-                        }
-                      }));
+                    req.session.email = email;
                     res.redirect('/complete');
                 } else {
                     console.log("cant login");
-                    // send login faild page
                     res.redirect('/users');
                 }
             });
