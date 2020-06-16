@@ -2,17 +2,140 @@
 <html lang="ja">
 <head>
     <meta charset="UTF-8">
-    <title>民宿 藤兵衛</title>
+    <title>民宿 お宿 藤兵衛 野沢温泉村</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="stylesheets/style.css">
+    <style>
+        #input_area {
+            padding: 20px 20px 20px 20px;
+        }
+        .text_area {
+            background-color: #ffffff;
+            padding: 30px 30px 30px 30px;
+        }
+        .photo_area {
+            margin-left: auto;
+            margin-right: auto;
+            height: 548px;
+            width: 1052px;
+        }
+        #photo1 {
+            background-image: url("images/katana.jpg");
+            background-attachment: fixed;
+            background-size: cover;
+            background-repeat: no-repeat;
+            height: 548px;
+            width: 1052px;
+        }
+        #photo2{
+            background-image: url("images/toubee_logo.jpg");
+            background-attachment: fixed;
+            background-size: cover;
+            background-repeat: no-repeat;
+            height: 548px;
+            width: 1052px;
+        }
+    </style>
 </head>
+
 <body>
-    野沢温泉村
-    民宿 藤兵衛のホームページへようこそ
-    趣味で作っているので雑なのは許してください（おねがーい）
-    インフラからすべて一人でやっているので。。
-    うちを紹介していきますね。
-    <a href="/login.html"> ログイン</a>
-    <a href="/toubeeHome.html">ホーム</a><p>いまここ</p>
-    <a href="/map.html">アクセス</a>
-    <a href="/plan.html">料金</a>
+    <nav id="label">
+        <div class="label-box">
+            <ul class="label-ul">
+                <li>
+                    <a href="/toubeeHome.html" class="label-logo">
+                        <span class="text-label">民宿 藤兵衛</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="/login.html" class="label-login">
+                        <span class="text-label">login</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="/toubeeHome.html" class="label-home">
+                        <span class="text-label">Home</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="/map.html" class="label-map">
+                        <span class="text-label">access</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="/plan.html"class="label-plan">
+                        <span class="text-label">price</span>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+    <div id="input_area">
+        <div>民宿 藤兵衛のホームページへようこそ</div>
+        <div class=photo_area>
+            <div id=photo1 style="display: block;">
+            </div>
+            <div id=photo2 style="display: none;">
+            </div>
+        </div>
+        <div id=coment>
+            趣味で作っているので雑なのは許してください（おねがーい）
+            インフラからすべて一人でやっているので。。
+        </div>
+        <div class="text_area" style="padding-top: 60px;">
+            この度は、お宿藤兵衛(とうべえ)のホームページにお越しいただき、誠にありがとうございます。<br>
+            当宿は長野県下高井郡野沢温泉村にある民宿です。<br>
+
+            温泉街に位置し、外湯巡りに最適です。お食事は山菜をはじめ、地元食材をふんだん使っております。<br>
+
+            ご宿泊・観光でお越しいただいた皆様のやすらぎの場所になれるよう、日々心掛けております。<br>
+
+            穏やかで優しいひとときをご満喫くださいませ。皆様のお越しを心よりお待ちしております。 <br>
+        </div>
+        <div class="text_area" style="padding-top: 80px;">
+            お宿藤兵衛は野沢温泉スキー場へのアクセスも良好です！<br>
+
+            藤兵衛より、長坂ゴンドラリフトまで徒歩9分位<br>
+            無料シャトルバスのバス停留所まで徒歩30秒位　<br>
+            動く歩道(無料)の乗り場まで徒歩6分位<br>
+        </div>
+        <div class="text_area address">
+            <h3>お宿 藤兵衛</h3>
+            <p class="text2">〒389-2502<br />
+            長野県下高井郡野沢温泉村大字<br />
+            豊郷9754-2<br />
+            TEL：0269-85-2483<br />
+            FAX：0269-85-3702 <br />
+            <br />
+            [チェックイン] 15:00<br />
+            [チェックアウト] 10:00<br />
+            [客室]
+            8室(和室)<br />
+            [駐車場]
+            10台 </p>
+        </div>
+    </div>
 </body>
+<script>
+$(function(){
+    var photo_index = 1;
+    var photo_length = $(".photo_area div").length;
+    setInterval(function(){
+        if (photo_index > photo_length) {
+            photo_index = 1
+        
+        }
+        console.log(photo_index);
+        for(var i=1; i <= photo_length; i++) {
+            $("#photo" + i).attr("style", "display:none");
+        }
+            $("#photo" + photo_index).attr("style", "display:block");
+        photo_index++;
+    },4000);
+    $("li").mouseover(function(){
+        console.log("aiueo");
+    })
+});
+
+</script>
 </html>

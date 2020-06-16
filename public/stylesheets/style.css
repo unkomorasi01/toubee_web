@@ -1,8 +1,64 @@
-body {
-  padding: 50px;
-  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+body{
+  background-image: url("../images/back_img.jpg");
+  background-size: cover;
 }
 
-a {
-  color: #00B7FF;
+#label {
+  background-color: #37e1ff;
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  width: 100%;
+  height: 50px;
+  display: block;
+  margin: 0;
+}
+
+.label-box {
+  margin: 0 auto;
+  position: relative;
+  max-width: 1110px;
+}
+
+.label-logo {
+  background-image: url("../images/toubee_logo.png");
+  width: 120px;
+  height: 37px;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+
+.label-ul {
+  display: flex;
+  list-style: none;
+  margin-top: 0px;
+  margin-bottom: 0px;
+  justify-content: space-between;
+}
+.label-ul li {
+  width: auto;
+  height: 50px;
+
+}
+
+.text-label {
+  position: absolute;
+  clip: rect(1px, 1px, 1px, 1px);
+  -webkit-clip-path: inset(0px 0px 99.9% 99.9%);
+  clip-path: inset(0px 0px 99.9% 99.9%);
+  overflow: hidden;
+  height: 1px;
+  width: 1px;
+  padding: 0;
+  border: 0;
+  top: 50%;
+}
+
+.label-ul a {
+}
+
+a:link {
+  text-decoration: none;
 }
