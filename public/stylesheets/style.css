@@ -4,15 +4,20 @@ body{
 }
 
 #label {
-  background-color: #37e1ff;
+  /*background-color: #053d00af;*/
   position: absolute;
   top: 0;
   right: 0;
   left: 0;
   width: 100%;
-  height: 50px;
+  height: 160px;
   display: block;
   margin: 0;
+  z-index: 1;
+}
+
+.main-logo {
+  position: relative;
 }
 
 .label-box {
@@ -23,11 +28,13 @@ body{
 
 .label-logo {
   background-image: url("../images/toubee_logo.png");
-  width: 120px;
-  height: 37px;
+  width: 288px;
+  height: 100px;
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center center;
+  display: block;
+  margin: 0 auto;
 }
 
 .label-ul {
@@ -39,7 +46,7 @@ body{
 }
 .label-ul li {
   width: auto;
-  height: 50px;
+  height: 60px;
 
 }
 
@@ -61,4 +68,9 @@ body{
 
 a:link {
   text-decoration: none;
+}
+
+.text-area {
+  position: relative;
+  top: 170px;
 }
