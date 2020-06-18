@@ -11,6 +11,7 @@ body{
   left: 0;
   width: 100%;
   height: 160px;
+  min-width: 563px;
   display: block;
   margin: 0;
   z-index: 1;
@@ -30,6 +31,50 @@ body{
   background-image: url("../images/toubee_logo.png");
   width: 288px;
   height: 100px;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  display: block;
+  margin: 0 auto;
+}
+
+.label-login {
+  background-image: url("../images/login.png");
+  width: 90px;
+  height: 60px;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  display: block;
+  margin: 0 auto;
+}
+
+.label-home {
+  background-image: url("../images/home.png");
+  width: 90px;
+  height: 60px;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  display: block;
+  margin: 0 auto;
+}
+
+.label-map {
+  background-image: url("../images/access.png");
+  width: 90px;
+  height: 60px;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  display: block;
+  margin: 0 auto;
+}
+
+.label-plan {
+  background-image: url("../images/price.png");
+  width: 90px;
+  height: 60px;
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center center;
@@ -72,5 +117,37 @@ a:link {
 
 .text-area {
   position: relative;
-  top: 170px;
+  top: 70px;
+}
+
+.address {
+  background-color: #ffffff;
+  position: absolute;
+}
+
+#column_name {
+  background-color: #fffd7f;
+}
+#column_data {
+  background-color: #faf9c9;
+}
+table {
+  background-color: #94934a;
+  margin: 40px auto 0px auto;
+}
+
+#time {
+  width: 678px;
+  margin: 0 auto;
+  font-size: 1.5em;
+}
+
+#explanation {
+  width: 678px;
+  margin: 0 auto;
+  font-size: 1.4em;
+}
+
+strong {
+  color: #94934a;
 }
