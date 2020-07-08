@@ -11,7 +11,7 @@ body{
   left: 0;
   width: 100%;
   height: 160px;
-  min-width: 563px;
+  min-width: 840px;
   display: block;
   margin: 0;
   z-index: 1;
@@ -118,6 +118,7 @@ a:link {
 .text-area {
   position: relative;
   top: 70px;
+  min-width: 839px;
 }
 
 .address {
